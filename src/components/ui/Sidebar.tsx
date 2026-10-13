@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "pala-ui-core";
@@ -26,9 +27,14 @@ export function Sidebar() {
         open ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex h-16 items-center gap-3 border-b border-border px-6">
-          <div className="flex h-8 w-8 items-center justify-center pala-cut-sm bg-primary text-sm font-bold text-[#1A1A1A] font-heading">
-            P
-          </div>
+          <Image
+            src="/pala-ui-logo.png"
+            alt="PalaUI logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+            priority
+          />
           <span className="font-heading text-lg font-bold text-foreground-primary">PalaUI</span>
         </div>
 

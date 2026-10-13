@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Funnel_Sans, Inter } from "next/font/google";
 import { PaletteSwatches } from "@/components/ui/PaletteSwatches";
@@ -25,9 +26,14 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between border-b border-white/10 bg-[#000]/40 px-6 py-4 backdrop-blur-md md:px-10">
         <div className="flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center pala-cut-sm bg-primary text-sm font-bold text-[#1A1A1A] font-heading">
-            P
-          </div>
+          <Image
+            src="/pala-ui-logo.png"
+            alt="PalaUI logo"
+            width={32}
+            height={32}
+            className="h-8 w-8"
+            priority
+          />
           <span className="font-heading text-lg font-bold text-white">PalaUI</span>
         </div>
         <Link
@@ -53,9 +59,14 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#000]/60 via-[#000]/40 to-[#000]/75" />
 
         <div className="relative z-10 animate-slide-up max-w-3xl">
-          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center pala-cut-lg bg-primary text-2xl font-bold text-[#1A1A1A] font-heading">
-            P
-          </div>
+          <Image
+            src="/pala-ui-logo.png"
+            alt="PalaUI logo"
+            width={64}
+            height={64}
+            className="mx-auto mb-6 h-16 w-16"
+            priority
+          />
           <h1 className="font-heading text-5xl font-bold leading-tight text-white md:text-7xl">
             A warm UI kit
             <span className="text-primary block">for any project</span>
@@ -334,7 +345,7 @@ export default function LandingPage() {
       <footer className="border-t border-border px-6 py-8 md:px-10">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center text-sm text-foreground-secondary md:flex-row">
           <div className="flex items-center gap-2">
-            <div className="flex h-6 w-6 items-center justify-center pala-cut-sm bg-primary text-[10px] font-bold text-[#1A1A1A] font-heading">P</div>
+            <Image src="/pala-ui-logo.png" alt="PalaUI logo" width={24} height={24} className="h-6 w-6" />
             <span>PalaUI UI Library</span>
           </div>
           <div className="flex gap-6">
